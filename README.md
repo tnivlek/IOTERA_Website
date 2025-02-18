@@ -1,1 +1,3 @@
-# IOTERA_Website
+# Iotera Business Solutions Website
+
+## Project Structure
