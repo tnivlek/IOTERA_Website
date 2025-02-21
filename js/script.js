@@ -34,13 +34,27 @@ spollerButtons.forEach((button) => {
   });
 });
 
-// Add smooth scroll behavior
+// Update smooth scroll behavior with offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Get header height for offset
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      
+      // Calculate the target position with offset
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      // Smooth scroll to target
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
