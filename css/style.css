@@ -1651,3 +1651,176 @@ iframe {
     height: 350px;
   }
 }
+
+/* Mobile Computer Page Styles */
+.mobile-hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  background-color: #ffffff;
+  color: var(--apple-black);
+}
+
+.mobile-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mobile-hero__title {
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mobile-hero__subtitle {
+  font-size: 28px;
+  color: var(--apple-black);
+}
+
+.mobile-brands {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.mobile-brands__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mobile-brands__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.mobile-brands__item {
+  text-align: center;
+}
+
+.mobile-brands__image {
+  margin-bottom: 30px;
+}
+
+.mobile-brands__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mobile-brands__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--apple-black);
+}
+
+.mobile-brands__text {
+  font-size: 18px;
+  color: var(--apple-gray);
+  margin-bottom: 20px;
+}
+
+.mobile-brands__button {
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  .mobile-brands__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hero__title {
+    font-size: 42px;
+  }
+  
+  .mobile-hero__subtitle {
+    font-size: 24px;
+  }
+  
+  .mobile-brands__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Chapternav Styles */
+.chapternav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  position: sticky;
+  top: 48px;
+  z-index: 999;
+  width: 100%;
+  height: 110px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.chapternav-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.chapternav-items {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.chapternav-item {
+  height: 100%;
+  flex: 1;
+}
+
+.chapternav-link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8px;
+  transition: color 0.3s ease;
+  color: var(--apple-gray);
+}
+
+.chapternav-link:hover {
+  color: var(--apple-black);
+}
+
+.chapternav-icon {
+  height: 54px;
+  margin-bottom: 10px;
+}
+
+.chapternav-icon img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.chapternav-label {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chapternav {
+    height: 90px;
+  }
+
+  .chapternav-icon {
+    height: 44px;
+  }
+
+  .chapternav-label {
+    font-size: 11px;
+  }
+}
